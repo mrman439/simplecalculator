@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class calculator {
+public class Calculator {
 
     public static void main(String[] args) {
 
@@ -15,26 +15,25 @@ public class calculator {
         Scanner scannernum2 = new Scanner(System.in);
         float number2 = scannernum2.nextFloat();
 
-
             switch (choice) {
             case "+":
-                float answerPlus = number1 + number2;
-                System.out.print("The answer is: " + answerPlus);
+                float answer = number1 + number2;
+                System.out.print("The answer is: " + answer);
                 break;
 
             case "-":
-                float answerMinus = number1 - number2;
-                System.out.print("The answer is: " + answerMinus);
+                answer = number1 - number2;
+                System.out.print("The answer is: " + answer);
                 break;
 
             case "*":
-                float answerMultiply = number1 * number2;
-                System.out.print("The answer is: " + answerMultiply);
+                answer = number1 * number2;
+                System.out.print("The answer is: " + answer);
                 break;
 
             case "/":
-                float answerDivide = number1 / number2;
-                System.out.print("The answer is: " + answerDivide);
+                answer = number1 / number2;
+                System.out.print("The answer is: " + answer);
                 break;
 
             default:
@@ -42,11 +41,6 @@ public class calculator {
                 break;
 
         }
-
-        
-
-
     }
 }
-
 
