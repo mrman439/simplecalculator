@@ -9,11 +9,9 @@ public class Calculator {
         String choice = scannerChoice.next();
 
         System.out.print("Number 1: ");
-        Scanner scannernum1 = new Scanner(System.in);
-        float number1 = scannernum1.nextFloat();
+        float number1 = scannerChoice.nextFloat();
         System.out.print("Number 2: ");
-        Scanner scannernum2 = new Scanner(System.in);
-        float number2 = scannernum2.nextFloat();
+        float number2 = scannerChoice.nextFloat();
 
             switch (choice) {
             case "+":
