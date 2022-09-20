@@ -12,6 +12,7 @@ public class Calculator {
         float number1 = scannerChoice.nextFloat();
         System.out.print("Number 2: ");
         float number2 = scannerChoice.nextFloat();
+        scannerChoice.close();
 
             switch (choice) {
             case "+":
