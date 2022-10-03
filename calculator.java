@@ -2,6 +2,25 @@ import java.util.Scanner;
 
 public class Calculator {
 
+    public static String SentenceStarter = "The answer is: ";
+
+    public static void Add(float x, float y){
+        float answer = x + y;
+        System.out.print(SentenceStarter + answer);
+    }
+    public static void Minus(float x, float y){
+        float answer = x - y;
+        System.out.print(SentenceStarter + answer);
+    }
+    public static void Multiply(float x, float y){
+        float answer = x * y;
+        System.out.print(SentenceStarter + answer);
+    }
+    public static void Divide(float x, float y){
+        float answer = x / y;
+        System.out.print(SentenceStarter + answer);
+    }
+
     public static void main(String[] args) {
 
         System.out.print("Pick an operator ( +, -, *, / ): ");
@@ -14,32 +33,26 @@ public class Calculator {
         float number2 = scannerChoice.nextFloat();
         scannerChoice.close();
 
-            switch (choice) {
+        switch (choice) {
             case "+":
-                float answer = number1 + number2;
-                System.out.print("The answer is: " + answer);
+                Add(number1, number2);
                 break;
 
             case "-":
-                answer = number1 - number2;
-                System.out.print("The answer is: " + answer);
+                Minus(number1, number2);
                 break;
 
             case "*":
-                answer = number1 * number2;
-                System.out.print("The answer is: " + answer);
+                Multiply(number1, number2);
                 break;
 
             case "/":
-                answer = number1 / number2;
-                System.out.print("The answer is: " + answer);
+                Divide(number1, number2);
                 break;
+
 
             default:
-                System.out.print("INVALID OPERATOR: " + choice);
-                break;
-
+                throw new IllegalStateException("Unexpected value: " + choice);
         }
     }
 }
-
